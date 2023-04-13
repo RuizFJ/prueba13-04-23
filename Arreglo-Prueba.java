@@ -12,9 +12,9 @@ public class Arreglo {
 		int a[];
 		int b[];
 		int n,n2,ppunto=0,suma=0,suma2=0;
-	    float sumaraiz1=0,sumaraiz2=0,sumatot;
+	    float sumaraiz1=0,sumaraiz2=0,sumatot,z=0;
 		do {
-		System.out.println("Ingrese el tamaño del primer arreglo arrglo");
+		System.out.println("Ingrese el tamaño del primer arreglo");
 		n=tc.nextInt();
 		} while (n<=0);
 		a= new int[n];
@@ -40,19 +40,20 @@ public class Arreglo {
 		for (int j=0;j<b.length;j++) {
 			System.out.println("Arreglo2 = Ingrese el numero "+(j+1));
 			b[j]=tc.nextInt();
-			suma2 = (int) (suma + Math.pow(b[j], 2));
+			suma2 = (int) (suma2 + Math.pow(b[j], 2));
 		}
 		
 	sumaraiz1= (float) Math.sqrt(suma);
 	sumaraiz2= (float) Math.sqrt(suma2);
-	sumatot= sumaraiz1+sumaraiz2;
+	sumatot= sumaraiz1*sumaraiz2;
 		int j=b.length;
 		for (int x=0;x<a.length;x++) {
 		ppunto= ppunto+ a[x]*b[x];
 		
 		}
+			z=ppunto/sumatot;
 		System.out.println("El producto punto es = "+ppunto);
-		System.out.println("la suma de sus modulos es = "+sumatot);
+		System.out.println("Z = "+z);
 		
 		}
 		else {
